@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="myDiv"></div>
+    <script>
+        for( i=0;i<4;i++) {
+            var article = document.createElement("article")
+            var figure_services = document.createElement("figure")
+            var img_services = document.createElement("img")
+            img_services.setAttribute("src","./images/demo/215x315.gif")
+            figure_services.appendChild(img_services)
+            var header_services = document.createElement("strong")
+            header_services.innerHTML = "Lorum Ipsum Dolor"
+            var para_services = document.createElement("p")
+            para_services.innerHTML = "You can use and modify the template for both personal and commercial use. You must keep all copyright information and credit links in the template and associated files."
+            var anchor_Services = document.createElement("a")
+            anchor_Services.innerHTML = "Read More"
+            anchor_Services.setAttribute("href","https://www.google.co.in/")
+
+            article.appendChild(figure_services)
+            article.appendChild(header_services)
+            article.appendChild(para_services)
+            article.appendChild(anchor_Services)
+
+            document.getElementById("myDiv").appendChild(article)
+        }
+        
+        // var myObj = [
+        //     {
+        //         imgTag1: "./images/demo/32x32.gif",
+        //         heading1: "Lorum Ipsum",
+        //         para1: "You can use and modify the template for both personal and commercial use. You must keep all copyright information and credit links in the template and associated files.",
+        //         anchor1: "Read More"
+        //     }
+        // ]
+
+        // myObj.forEach((user) => {
+
+        //     for (i = 0; i < 3; i++) {
+        //         var article_services = document.createElement("article")
+        //         var figure_services = document.createElement("figure")
+        //         var img_services = document.createElement("img")
+        //         img_services.src = user.imgTag1
+        //         figure_services.appendChild(img_services)
+        //         var header_services = document.createElement("strong")
+        //         header_services.innerHTML = user.heading1
+        //         var para_services = document.createElement("p")
+        //         para_services.innerHTML = user.para1
+        //         var ancher_services = document.createElement("a")
+        //         ancher_services.innerHTML= user.anchor1
+        //         ancher_services.href = "www.google.com"
+
+        //         article_services.appendChild(figure_services)
+        //         article_services.appendChild(header_services)
+        //         article_services.appendChild(para_services)
+        //         article_services.appendChild(ancher_services)
+        //         document.getElementById("myDiv").appendChild(article_services)
+        //     }
+            
+        // })
+    </script>
+</body>
+
+</html>

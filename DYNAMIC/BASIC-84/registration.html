@@ -1,0 +1,104 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>myBasic-84</title>
+    <link rel="stylesheet" href="P.basic84.css" type="text/css">
+    <style>
+        label {
+            background-color: blue;
+            color: white;
+            font-weight: bold;
+            padding: 4px;
+        }
+
+        input {
+            background-color: turquoise;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- header section -->
+    <div class="wrapper row1">
+        <header id="header" class="clear">
+            <div id="hgroup">
+                <h1>
+                    <a href="#">Basic 84</a>
+                </h1>
+                <h2>Free HTML5 Website Template</h2>
+            </div>
+            <form action="#" method="post">
+                <fieldset>
+                    <legend>Search:</legend>
+                    <input type="text" value="Search Our Website&hellip;"
+                        onFocus="this.value=(this.value=='Search Our Website&hellip;')? '' : this.value ;">
+                    <input type="submit" id="sf_submit" value="submit">
+                </fieldset>
+            </form>
+            <nav>
+                <ul>
+                    <li><a href="./my.basic-84.html">Home page</a></li>
+                    <li><a href="#">Text Link</a></li>
+                    <li><a href="#">Text Link</a></li>
+                    <li><a href="./userlist.html">user list</a></li>
+                    <li class="last"><a href="./registration.html">Registration</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+    <!-- content body -->
+    <div class="wrapper row2">
+        <div id="container" class="clear">
+
+            <div id="form">
+                <form onsubmit="getUserData(event)" style="width:100%;margin: 0 auto;color: black;">
+                    <label for="email">EMAIL ADDRESS</label>
+                    <input type="email" id="email" onkeyup="validate()">
+
+                    <label for="fullName">FULL NAME</label>
+                    <input type="text" name="" id="fullName" onkeyup="validate()">
+
+                    <label for="userName">USER NAME</label>
+                    <input type="text" id="userName" onkeyup="validate()">
+
+                    <button type="button" disabled>SUBMIT</button>
+                </form>
+                <br>
+
+                <div id="myDiv">
+                    <table border="2" style="width: 100%;color: black;">
+                        <thead>
+                            <tr>
+                                <th>EMAIL ADDRESS</th>
+                                <th>FIRST NAME</th>
+                                <th>LAST NAME</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!-- / content body -->
+        </div>
+        <!-- ============ table ========= -->
+
+    </div>
+    <!-- footer section -->
+    <div class="wrapper row3">
+        <footer id="footer" class="clear">
+            <p class="fl_left">Copyright &copy; 2018 - All Rights Reserved - <a href="#">Domain Name</a></p>
+            <p class="fl_right">Template by <a target="_blank" href="https://www.os-templates.com/"
+                    title="Free Website Templates">OS Templates</a></p>
+        </footer>
+    </div>
+    </div>
+    <!-- ========= js ============== -->
+    <script src="./registration.js"></script>
+</body>
+
+</html>

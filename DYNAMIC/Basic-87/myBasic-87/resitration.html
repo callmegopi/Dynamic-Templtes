@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>myBasic-87</title>
+    <link rel="stylesheet" href="myBasic-87.styles.css" type="text/css">
+    <style>
+        label {
+            background-color: blue;
+            color: white;
+            font-weight: bold;
+            padding: 4px;
+        }
+
+        input {
+            background-color: #e7e6e6;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <div class="wrapper row1">
+        <header id="header" class="clear">
+            <div id="hgroup">
+                <h1><a href="#">Basic 87</a></h1>
+                <h2>Free HTML5 Website Template</h2>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="./myBasic-87.html">homepage</a></li>
+                    <li><a href="#">Text Link</a></li>
+                    <li><a href="./user-87.html">user list</a></li>
+                    <li><a href="#">Text Link</a></li>
+                    <li class="last"><a href="./resitration.html">registration</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+    <!-- content section -->
+    <div class="wrapper row2">
+        <div id="container" class="clear">
+            <!-- content body -->
+            <div id="homepage">
+                <!-- One Quarter -->
+                    <form onsubmit="getUserData(event)" style="width:100%;margin: 0 auto;color: black;">
+                        <label for="email">EMAIL ADDRESS</label>
+                        <input type="email" id="email" onkeyup="valiDate()">
+    
+                        <label for="fullName">FULL NAME</label>
+                        <input type="text" name="" id="fullName" onkeyup="valiDate()">
+    
+                        <label for="userName">USER NAME</label>
+                        <input type="text" id="userName" onkeyup="valiDate()">
+    
+                        <button type="button" disabled>SUBMIT</button>
+                    </form>
+                <br>
+        </div>
+        <div>
+            <table border="1" style="width: 100%;color: black;">
+                <thead>
+                    <tr>
+                        <th>EMAIL ADDRESS</th>
+                        <th>FIRST NAME</th>
+                        <th>USER NAME</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <!-- Footer -->
+    <div class="wrapper row3">
+        <footer id="footer" class="clear">
+            <p class="fl_left">Copyright &copy; 2018 - All Rights Reserved - <a href="#">Domain Name</a></p>
+            <p class="fl_right">Template by <a target="_blank" href="https://www.os-templates.com/" title="Free Website Templates">OS Templates</a></p>
+        </footer>
+    </div>
+    <!-- ============ js code ========= -->
+    <script src="./registration-87.js"></script>
+</body>
+</html>
