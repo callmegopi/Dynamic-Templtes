@@ -28,7 +28,7 @@
     <div class="wrapper row1">
         <div id="header" class="clear">
             <div id="hgroup">
-               
+
             </div>
             <form action="#" method="post">
                 <fieldset>
@@ -70,7 +70,10 @@
                             <label for="userName">USER NAME</label>
                             <input type="text" id="userName" onkeyup="validate()">
 
-                            <button type="button" disabled>SUBMIT</button>
+                            <button type="button" id="submit" disabled>SUBMIT</button>
+
+                            <button type="button" id="update" onclick="updatePerson()"
+                                style="display:none;">update</button>
                         </form>
                     </div>
 
@@ -78,6 +81,7 @@
                         <table border="1" style="color: black;width: 100%;">
                             <thead>
                                 <tr>
+                                    <th>SL.NUMBER</th>
                                     <th>EMAIL ADDRESS</th>
                                     <th>FIRST NAME</th>
                                     <th>LAST NAME</th>
@@ -104,7 +108,7 @@
                     title="Free Website Templates">OS Templates</a></p>
         </footer>
     </div>
-    <script src="./form.js"></script>
+    <script src="./form-83.js"></script>
 </body>
 
 </html>
