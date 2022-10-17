@@ -3,7 +3,8 @@ var person = {
     fullName: "",
     userName: "",
 }
-var allPersonsDATA = []
+// var allPersonsDATA = []
+var allPersonsDATA = JSON.parse(localStorage.getItem("usersIn_localStroage"))
 
 // ========= create =============
 function getUserData() {
