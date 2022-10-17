@@ -46,7 +46,7 @@
         <div id="container" class="clear">
             <!-- slider-->
            
-                <form onsubmit="getUserData(event)" style="width:100%;margin: 0 auto;color: black;">
+                <form style="width:100%;margin: 0 auto;color: black;">
                     <label for="email">EMAIL ADDRESS</label>
                     <input type="email" id="email" onkeyup="valiDate()">
 
@@ -56,7 +56,9 @@
                     <label for="userName">USER NAME</label>
                     <input type="text" id="userName" onkeyup="valiDate()">
 
-                    <button type="button" disabled>SUBMIT</button>
+                    <button type="button" id="submit" onclick="getUserData()" disabled>SUBMIT</button>
+
+                    <button type="button" id="update" onclick="updatePerson()" style="display:none;">UPDATE</button>
                 </form>
             
             <!-- tabel -->
