@@ -4,15 +4,16 @@ var person = {
     userName: "",
 }
 
-var DisplayPersons = []
+// var DisplayPersons = []
+var DisplayPersons = JSON.parse(localStorage.getItem("userData"));
 // ========== create ============
-function getUserData(event) {
-    event.preventDefault()
-
+function getUserData() {
     for (a in person) {
         person[a] = document.getElementById(a).value
     }
     DisplayPersons.push({ ...person })
+    var allData = JSON.stringify(DisplayPersons)
+    localStorage.setItem("userData", allData)
     clear()
     displayingPersons()
     valiDate()
@@ -28,13 +29,33 @@ function clear() {
 // ========== display persons =============
 function displayingPersons() {
     document.querySelector("tbody").innerHTML = "";
-    DisplayPersons.forEach((person) => {
+    DisplayPersons.forEach((person, i) => {
         var myTr = document.createElement("tr")
+        indexTd = document.createElement("td")
+        indexTd.innerHTML = i + 1
+        myTr.appendChild(indexTd)
         for (a in person) {
             var myTd = document.createElement("td")
             myTd.innerHTML = person[a]
             myTr.appendChild(myTd)
         }
+
+        // Edit
+        var editTd = document.createElement("td")
+        var editBtn = document.createElement("button")
+        editBtn.innerHTML = "Edit"
+        editBtn.setAttribute("onclick", "editPerson(" + i + ")")
+        editTd.appendChild(editBtn)
+        myTr.appendChild(editTd)
+
+        // Delete
+        var deleteTd = document.createElement("td")
+        var deleteBtn = document.createElement("button")
+        deleteBtn.innerHTML = "Delete"
+        deleteBtn.setAttribute("onclick", "deletePerson(" + i + ")")
+        deleteTd.appendChild(deleteBtn)
+        myTr.appendChild(deleteTd)
+
         document.querySelector("tbody").appendChild(myTr)
     })
 }
@@ -81,5 +102,34 @@ function valiDate() {
         document.querySelector("button").setAttribute("disabled", true)
     }
 }
+var index;
+// ======================= edit person =======================
+function editPerson(i) {
+    index = i;
+    for (a in person) {
+        document.getElementById(a).value = DisplayPersons[i][a]
+    }
+    document.getElementById("update").style.display = "block"
+    document.getElementById("submit").style.display = "none"
+}
 
-document.querySelector("button").onclick = getUserData
+// ==================== delete person =========================
+function deletePerson(i) {
+    DisplayPersons.splice(i, 1)
+    localStorage.setItem("userData", JSON.stringify(DisplayPersons))
+    displayingPersons()
+}
+
+// ====================== update person ==========================
+function updatePerson() {
+    for (a in person) {
+        person[a] = document.getElementById(a).value
+    }
+    DisplayPersons[index] = { ...person }
+    displayingPersons()
+    localStorage.setItem("userData", JSON.stringify(DisplayPersons));
+    document.getElementById("update").style.display = "none";
+    document.getElementById("submit").style.display = "block";
+    clear();
+
+}

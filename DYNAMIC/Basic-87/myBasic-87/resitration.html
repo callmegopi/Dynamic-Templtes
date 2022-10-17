@@ -44,7 +44,7 @@
             <!-- content body -->
             <div id="homepage">
                 <!-- One Quarter -->
-                    <form onsubmit="getUserData(event)" style="width:100%;margin: 0 auto;color: black;">
+                    <form style="width:100%;margin: 0 auto;color: black;">
                         <label for="email">EMAIL ADDRESS</label>
                         <input type="email" id="email" onkeyup="valiDate()">
     
@@ -54,7 +54,9 @@
                         <label for="userName">USER NAME</label>
                         <input type="text" id="userName" onkeyup="valiDate()">
     
-                        <button type="button" disabled>SUBMIT</button>
+                        <button type="button" id="submit" onclick="getUserData()" disabled>SUBMIT</button>
+
+                        <button type="button" id="update" style="display:none;" onclick="updatePerson()">UPDATE</button>
                     </form>
                 <br>
         </div>
@@ -62,6 +64,7 @@
             <table border="1" style="width: 100%;color: black;">
                 <thead>
                     <tr>
+                        <th>Sl. NUMBER</th>
                         <th>EMAIL ADDRESS</th>
                         <th>FIRST NAME</th>
                         <th>USER NAME</th>
