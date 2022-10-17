@@ -14,7 +14,7 @@ var person = {
 }
 
 // var outPut = []
-var outPut = JSON.parse(localStorage.getItem("perons-Gopi"));
+var outPut = JSON.parse(localStorage.getItem("persons-Gopi"));
 
 function getUserData(event) {
     event.preventDefault()
@@ -116,6 +116,7 @@ function deletePerson(i) {
     outPut.splice(i, 1);
     localStorage.setItem("persons-Gopi", JSON.stringify(outPut))
     displayingPersons();
+    clearForm()
 }
 
 

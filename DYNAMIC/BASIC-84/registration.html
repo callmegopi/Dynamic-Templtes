@@ -54,7 +54,7 @@
         <div id="container" class="clear">
 
             <div id="form">
-                <form onsubmit="getUserData(event)" style="width:100%;margin: 0 auto;color: black;">
+                <form style="width:100%;margin: 0 auto;color: black;">
                     <label for="email">EMAIL ADDRESS</label>
                     <input type="email" id="email" onkeyup="validate()">
 
@@ -64,7 +64,9 @@
                     <label for="userName">USER NAME</label>
                     <input type="text" id="userName" onkeyup="validate()">
 
-                    <button type="button" disabled>SUBMIT</button>
+                    <button type="button" onclick="getUserData()" id="submit" disabled>SUBMIT</button>
+
+                    <button type="button" id="update" onclick="updatePerson()" style="display:none;">update</button>
                 </form>
                 <br>
 
@@ -72,6 +74,7 @@
                     <table border="2" style="width: 100%;color: black;">
                         <thead>
                             <tr>
+                                <th>SRIOUL NUM</th>
                                 <th>EMAIL ADDRESS</th>
                                 <th>FIRST NAME</th>
                                 <th>LAST NAME</th>
